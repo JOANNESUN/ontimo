@@ -4,37 +4,43 @@ One-page public site for Ontimo at **https://ontimoapp.com**, used for Google Pl
 
 - `index.html` — the landing page
 - `assets/` — mascot, icons, app screenshots (cropped from the App Store set)
-- `_headers` — cache rules for `assets/` (Cloudflare Pages)
+- `CNAME` — the custom domain, read by GitHub Pages
+- `.nojekyll` — serves files as-is, no Jekyll processing
 
 ## Local preview
 
     open index.html
 
-## Deploy (Cloudflare Pages)
+## Deploy (GitHub Pages)
 
 Static site, no build step. Every push to `main` redeploys automatically.
 
-1. Cloudflare dashboard → Workers & Pages → Create → Pages → Connect to Git → authorise GitHub → pick `JOANNESUN/ontimo`.
-2. Build settings: framework preset **None**, build command **empty**, build output directory **`/`**. Production branch `main`.
-3. Save and Deploy. The site goes live at `<project>.pages.dev` first — check it there before touching DNS.
+1. The repo must be **public** — Pages from a private repo needs GitHub Pro.
+2. Repo → **Settings** → **Pages** → Source: **Deploy from a branch** → branch `main`, folder `/ (root)` → Save.
+3. Under **Custom domain**, enter `ontimoapp.com` and Save. (The `CNAME` file in this repo sets the same thing.)
+4. Once DNS is in place and the check passes, tick **Enforce HTTPS**.
 
-## Domain (registered at VentraIP)
+First build takes a minute or two; the site is live at `https://joannesun.github.io/ontimo/` until the domain resolves.
 
-The domain must be on Cloudflare's nameservers before Pages can serve it.
+## DNS (domain registered at VentraIP)
 
-1. Cloudflare dashboard → Add a site → `ontimoapp.com` → Free plan. Cloudflare scans existing DNS and shows you two nameservers, e.g. `xxx.ns.cloudflare.com`.
-2. VentraIP → VIPcontrol → Domain Names → `ontimoapp.com` → Manage → Nameservers → replace the VentraIP nameservers with Cloudflare's two. Save.
-3. Wait for Cloudflare to report the zone as Active (usually minutes, can be up to 24 hours).
-4. Back in the Pages project → Custom domains → Set up a domain → `ontimoapp.com`, then repeat for `www.ontimoapp.com`. Cloudflare creates the DNS records and the certificate itself.
-5. Confirm `https://ontimoapp.com` loads with a padlock before starting verification.
+In VIPcontrol → Domain Names → `ontimoapp.com` → Manage → DNS:
 
-If you keep any email on the domain, copy the existing MX and TXT records into Cloudflare DNS at step 1 before switching nameservers, or mail will stop.
+| Type | Name | Value |
+| --- | --- | --- |
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `joannesun.github.io.` |
+
+All four A records are needed — they are GitHub's Pages servers. Allow up to a day for propagation, then GitHub issues the Let's Encrypt certificate automatically.
 
 ## Google Play website verification
 
 1. Play Console → Account details → Organization website. Follow the link to Search Console.
 2. Search Console → Add property → **Domain** (not URL prefix) → `https://ontimoapp.com`. A Domain property covers `www` and both protocols.
-3. Search Console shows a `google-site-verification=...` TXT record. Add it in Cloudflare → DNS → Records: type `TXT`, name `@`, that value. Wait a few minutes, click Verify.
+3. Search Console shows a `google-site-verification=...` TXT record. Add it in VentraIP DNS: type `TXT`, name `@`, that value. Wait a few minutes, click Verify.
 4. Back in Play Console, enter `https://ontimoapp.com` and save.
 
 The Search Console property must be owned by the same Google account as the Play developer account.
