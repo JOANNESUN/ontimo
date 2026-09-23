@@ -2,10 +2,11 @@
 
 One-page public site for Ontimo at **https://ontimoapp.com**, used for Google Play Console website verification.
 
-- `index.html` — the landing page
-- `assets/` — mascot, icons, app screenshots (cropped from the App Store set)
-- `CNAME` — the custom domain, read by GitHub Pages
-- `.nojekyll` — serves files as-is, no Jekyll processing
+- `index.html`: the landing page (English)
+- `assets/`: mascot, icons, shared stylesheet, app screenshots (cropped from the App Store set)
+- `zh/`, `id/`: Traditional Chinese and Indonesian versions
+- `CNAME`: the custom domain, read by GitHub Pages
+- `.nojekyll`: serves files as they are, no Jekyll processing
 
 ## Local preview
 
@@ -15,7 +16,7 @@ One-page public site for Ontimo at **https://ontimoapp.com**, used for Google Pl
 
 Static site, no build step. Every push to `main` redeploys automatically.
 
-1. The repo must be **public** — Pages from a private repo needs GitHub Pro.
+1. The repo must be **public**. Pages from a private repo needs GitHub Pro.
 2. Repo → **Settings** → **Pages** → Source: **Deploy from a branch** → branch `main`, folder `/ (root)` → Save.
 3. Under **Custom domain**, enter `ontimoapp.com` and Save. (The `CNAME` file in this repo sets the same thing.)
 4. Once DNS is in place and the check passes, tick **Enforce HTTPS**.
@@ -34,7 +35,7 @@ In VIPcontrol → Domain Names → `ontimoapp.com` → Manage → DNS:
 | A | `@` | `185.199.111.153` |
 | CNAME | `www` | `joannesun.github.io.` |
 
-All four A records are needed — they are GitHub's Pages servers. Allow up to a day for propagation, then GitHub issues the Let's Encrypt certificate automatically.
+All four A records are needed. They are GitHub's Pages servers. Allow up to a day for propagation, then GitHub issues the Let's Encrypt certificate automatically.
 
 ## Google Play website verification
 
@@ -48,5 +49,5 @@ The Search Console property must be owned by the same Google account as the Play
 ## Links used
 
 - App Store: https://apps.apple.com/us/app/ontimo-medicine-reminder/id6808908688
-- Privacy policy (footer): https://medication-scan-proxy.joannecysun.workers.dev/ — the same policy the app links to, served by the Worker. Keep one copy; do not fork it into this repo.
+- Privacy policy (footer): https://medication-scan-proxy.joannecysun.workers.dev/ is the same policy the app links to, served by the Worker. Keep one copy; do not fork it into this repo.
 - Google Play: shown as "coming soon" until the Android build clears review.
