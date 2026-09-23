@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ontimo: Medication reminders that start from a photo</title>
-<meta name="description" content="Ontimo reads your prescription bag or label with AI and turns it into daily medication reminders. Built for caregivers and anyone managing several medicines a day.">
+<title>Ontimo: medicine reminder app that starts from a photo</title>
+<meta name="description" content="Ontimo turns a photo of a prescription bag or pharmacy label into daily medicine reminders. Free medication reminder app for iPhone, made in Taiwan.">
 <link rel="canonical" href="https://ontimoapp.com/">
 <link rel="alternate" hreflang="en" href="https://ontimoapp.com/">
 <link rel="alternate" hreflang="zh-Hant" href="https://ontimoapp.com/zh/">
@@ -12,12 +12,97 @@
 <link rel="alternate" hreflang="x-default" href="https://ontimoapp.com/">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/icon-180.png">
-<meta property="og:title" content="Ontimo: Medication reminders that start from a photo">
-<meta property="og:description" content="Scan a prescription bag or label and Ontimo builds the schedule, then reminds you when each dose is due.">
+<meta property="og:title" content="Ontimo: medicine reminder app that starts from a photo">
+<meta property="og:description" content="Photograph a prescription bag or label and Ontimo sorts out the medicine, the dose and the timing, then reminds you when each dose is due.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ontimoapp.com/">
-<meta property="og:image" content="https://ontimoapp.com/assets/mascot.png">
+<meta property="og:image" content="https://ontimoapp.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Ontimo">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ontimo: medicine reminder app that starts from a photo">
+<meta name="twitter:description" content="Photograph a prescription bag or label and Ontimo sorts out the medicine, the dose and the timing, then reminds you when each dose is due.">
+<meta name="twitter:image" content="https://ontimoapp.com/assets/og-image.png">
 <link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://ontimoapp.com/#website",
+      "url": "https://ontimoapp.com/",
+      "name": "Ontimo",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://ontimoapp.com/#author"
+      },
+      "about": {
+        "@id": "https://ontimoapp.com/#app"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://ontimoapp.com/#author",
+      "name": "Joanne Sun",
+      "email": "joannesun.dev@gmail.com",
+      "url": "https://ontimoapp.com/",
+      "sameAs": [
+        "https://github.com/JOANNESUN/ontimo"
+      ]
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://ontimoapp.com/#app",
+      "name": "Ontimo",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "iOS",
+      "url": "https://ontimoapp.com/",
+      "downloadUrl": "https://apps.apple.com/us/app/ontimo-medicine-reminder/id6808908688",
+      "installUrl": "https://apps.apple.com/us/app/ontimo-medicine-reminder/id6808908688",
+      "inLanguage": [
+        "zh-Hant",
+        "en",
+        "id"
+      ],
+      "image": "https://ontimoapp.com/assets/og-image.png",
+      "screenshot": [
+        "https://ontimoapp.com/assets/shot-today.webp",
+        "https://ontimoapp.com/assets/shot-medications.webp"
+      ],
+      "description": "Ontimo is a medication reminder app for iPhone. Photograph a prescription bag, pharmacy label or paper prescription and Ontimo reads the medicine, dose and timing, then reminds you when each dose is due.",
+      "countryOfOrigin": {
+        "@type": "Country",
+        "name": "Taiwan"
+      },
+      "author": {
+        "@id": "https://ontimoapp.com/#author"
+      },
+      "publisher": {
+        "@id": "https://ontimoapp.com/#author"
+      },
+      "sameAs": [
+        "https://apps.apple.com/us/app/ontimo-medicine-reminder/id6808908688",
+        "https://github.com/JOANNESUN/ontimo"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://ontimoapp.com/#webpage",
+      "url": "https://ontimoapp.com/",
+      "name": "Ontimo: medicine reminder app that starts from a photo",
+      "description": "Ontimo turns a photo of a prescription bag or pharmacy label into daily medicine reminders. Free medication reminder app for iPhone, made in Taiwan.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://ontimoapp.com/#website"
+      },
+      "primaryImageOfPage": "https://ontimoapp.com/assets/og-image.png"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -28,7 +113,7 @@
 </nav>
 
 <header class="wrap">
-  <img src="assets/mascot.png" alt="Ontimo's blue mascot holding a capsule" width="400" height="400">
+  <img src="assets/mascot.webp" alt="Ontimo's blue mascot holding a capsule" width="400" height="400">
   <h1>Ontimo</h1>
   <p class="tagline">Medication reminders that start from a photo of the prescription bag.</p>
   <div class="cta">
@@ -50,7 +135,7 @@
       <p class="lede">Ontimo, a medication reminder app made in Taiwan.</p>
     </div>
     <figure>
-      <img src="assets/shot-today.png" alt="Ontimo's Today screen showing the day's doses and what has been taken" width="600" height="1232" loading="lazy">
+      <img src="assets/shot-today.webp" alt="Ontimo's Today screen showing the day's doses and what has been taken" width="600" height="1232" loading="lazy">
     </figure>
   </section>
 
@@ -88,19 +173,19 @@
     <h2>Inside the app</h2>
     <ul class="shots">
       <li>
-        <img src="assets/shot-scan.png" alt="The scan screen, offering document scan, camera and photo library" width="600" height="1232" loading="lazy">
+        <img src="assets/shot-scan.webp" alt="The scan screen, offering document scan, camera and photo library" width="600" height="1232" loading="lazy">
         <span>Scan a prescription, bag or bottle</span>
       </li>
       <li>
-        <img src="assets/shot-medications.png" alt="The medications list grouped by schedule" width="600" height="1232" loading="lazy">
+        <img src="assets/shot-medications.webp" alt="The medications list grouped by schedule" width="600" height="1232" loading="lazy">
         <span>Every medicine, grouped by schedule</span>
       </li>
       <li>
-        <img src="assets/shot-mealtimes.png" alt="Editing a medication and choosing after-lunch as its time of day" width="600" height="1232" loading="lazy">
+        <img src="assets/shot-mealtimes.webp" alt="Editing a medication and choosing after-lunch as its time of day" width="600" height="1232" loading="lazy">
         <span>Before or after meals, in one tap</span>
       </li>
       <li>
-        <img src="assets/shot-pill-photo.png" alt="A saved close-up photo of a blue and white capsule" width="600" height="1232" loading="lazy">
+        <img src="assets/shot-pill-photo.webp" alt="A saved close-up photo of a blue and white capsule" width="600" height="1232" loading="lazy">
         <span>A photo of each pill, so no mix-ups</span>
       </li>
     </ul>
