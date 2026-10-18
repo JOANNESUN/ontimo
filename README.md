@@ -50,4 +50,6 @@ The Search Console property must be owned by the same Google account as the Play
 
 - App Store: https://apps.apple.com/us/app/ontimo-medicine-reminder/id6808908688
 - Privacy policy (footer): https://medication-scan-proxy.joannecysun.workers.dev/ is the same policy the app links to, served by the Worker. Keep one copy; do not fork it into this repo.
-- Google Play: shown as "coming soon" until the Android build clears review.
+- Google Play: https://play.google.com/store/apps/details?id=com.joannesun.ontimo
+
+Store buttons are per language: the English page uses the locale free Play URL and the US App Store, `zh/` uses `hl=zh_TW&gl=TW` and the Taiwan App Store, `id/` uses `hl=id&gl=ID` and the Indonesian App Store.
