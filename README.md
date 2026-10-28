@@ -4,7 +4,7 @@ One-page public site for Ontimo at **https://ontimoapp.com**, used for Google Pl
 
 - `index.html`: the landing page (English)
 - `assets/`: mascot, icons, shared stylesheet, app screenshots (cropped from the App Store set)
-- `zh/`, `id/`: Traditional Chinese and Indonesian versions
+- `tw/`, `id/`: Traditional Chinese and Indonesian versions
 - `CNAME`: the custom domain, read by GitHub Pages
 - `.nojekyll`: serves files as they are, no Jekyll processing
 
@@ -52,4 +52,4 @@ The Search Console property must be owned by the same Google account as the Play
 - Privacy policy (footer): https://medication-scan-proxy.joannecysun.workers.dev/ is the same policy the app links to, served by the Worker. Keep one copy; do not fork it into this repo.
 - Google Play: https://play.google.com/store/apps/details?id=com.joannesun.ontimo
 
-Store buttons are per language: the English page uses the locale free Play URL and the US App Store, `zh/` uses `hl=zh_TW&gl=TW` and the Taiwan App Store, `id/` uses `hl=id&gl=ID` and the Indonesian App Store.
+Store buttons are per language: the English page uses the locale free Play URL and the US App Store, `tw/` uses `hl=zh_TW&gl=TW` and the Taiwan App Store, `id/` uses `hl=id&gl=ID` and the Indonesian App Store.
