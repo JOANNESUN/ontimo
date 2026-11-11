@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>下載 Ontimo 按時吃藥｜用藥提醒</title>
+<meta name="description" content="拍一下藥袋，自動建立吃藥提醒。爸媽的藥、自己的保健品都能記。免費下載，iPhone 與 Android 都能用。">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://ontimoapp.com/get/">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/icon-180.png">
+<meta property="og:title" content="下載 Ontimo 按時吃藥">
+<meta property="og:description" content="拍一下藥袋，自動建立吃藥提醒。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ontimoapp.com/get/">
+<meta property="og:image" content="https://ontimoapp.com/assets/og-image.png">
+<meta property="og:locale" content="zh_TW">
+<style>
+:root{--cream:#FBEDE4;--purple:#5B18E8;--purple-soft:#E9E0FD;--ink:#1A1220;--muted:#6D6168;--line:#EADDD3}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:var(--cream);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;display:flex;justify-content:center}
+main{width:100%;max-width:440px;padding:26px 20px 36px}
+.app{display:flex;gap:16px;align-items:center}
+.icon{width:96px;height:96px;border-radius:22px;flex-shrink:0;display:block;box-shadow:0 2px 10px rgba(26,18,32,.08)}
+h1{font-size:23px;line-height:1.25;margin:0}
+.sub{font-size:15px;color:var(--muted);margin:5px 0 0;line-height:1.45}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);margin:20px 0 0;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+.facts div+div{border-left:1px solid var(--line)}
+.facts b{display:block;font-size:17px;color:var(--ink)}
+.facts span{display:block;font-size:12px;color:var(--muted);margin-top:3px}
+.get{display:flex;align-items:center;justify-content:center;width:100%;min-height:58px;margin:18px 0 0;border-radius:999px;background:var(--purple);color:#fff;font-size:20px;font-weight:700;text-decoration:none}
+.get + .get{margin-top:10px;background:var(--purple-soft);color:var(--purple)}
+.status{font-size:15px;color:var(--muted);margin:14px 0 8px;text-align:center}
+.bar{height:4px;width:56%;margin:0 auto;border-radius:2px;background:var(--purple-soft);overflow:hidden}
+.bar i{display:block;height:4px;width:0;background:var(--purple)}
+.bar.run i{animation:fill .4s linear forwards}
+@keyframes fill{to{width:100%}}
+.hint{font-size:13px;color:var(--muted);margin:10px 0 0;text-align:center}
+.shots{display:flex;gap:10px;overflow-x:auto;margin:24px -20px 0;padding:0 20px 6px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.shots img{width:44%;height:auto;flex-shrink:0;border-radius:14px;border:1px solid var(--line);scroll-snap-align:start;background:#fff}
+h2{font-size:18px;margin:26px 0 10px}
+.feat{list-style:none;margin:0;padding:0}
+.feat li{display:flex;gap:10px;font-size:15px;line-height:1.55;margin:0 0 10px}
+.feat li::before{content:"";flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--purple);margin-top:8px}
+.privacy{margin:18px 0 0;padding:14px 16px;border-radius:16px;background:#fff;font-size:14px;line-height:1.6;color:var(--muted)}
+.privacy b{color:var(--ink)}
+.notes{font-size:13px;color:var(--muted);margin:20px 0 0;line-height:1.7;text-align:center}
+.escape{margin:16px 0 0;padding:16px;border-radius:16px;background:#fff;border:1px solid var(--line);text-align:center}
+.esc-title{font-size:17px;font-weight:700;margin:0 0 6px}
+.esc-text{font-size:15px;line-height:1.6;color:var(--muted);margin:0 0 12px}
+.esc-btn{display:block;padding:14px;border-radius:999px;background:var(--ink);color:#fff;font-size:17px;font-weight:700;text-decoration:none;margin:0 0 12px}
+.esc-copy{font:inherit;font-size:15px;color:var(--purple);background:var(--purple-soft);border:0;border-radius:999px;padding:10px 18px}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<main>
+  <div class="app">
+    <img class="icon" src="../assets/icon-180.png" alt="" width="96" height="96">
+    <div>
+      <h1>Ontimo 按時吃藥</h1>
+      <p class="sub" id="sub">拍一下藥袋，自動建立吃藥提醒</p>
+    </div>
+  </div>
+
+  <div class="facts">
+    <div><b>免費</b><span>下載</span></div>
+    <div><b>10 次</b><span>免費掃描</span></div>
+    <div><b>免註冊</b><span>不用帳號</span></div>
+    <div><b>本機</b><span>資料存手機</span></div>
+  </div>
+
+  <a class="get" id="ios" href="https://apps.apple.com/tw/app/ontimo-%E6%8C%89%E6%99%82%E5%90%83%E8%97%A5/id6808908688">App Store 免費下載</a>
+  <a class="get" id="android" href="https://play.google.com/store/apps/details?id=com.joannesun.ontimo&amp;hl=zh_TW&amp;gl=TW">Google Play 免費下載</a>
+
+  <div id="auto" hidden>
+    <p class="status" id="status" aria-live="polite"></p>
+    <div class="bar" id="bar"><i></i></div>
+    <p class="hint">沒有自動打開？請點上面的按鈕</p>
+  </div>
+
+  <div class="escape" id="escape" hidden>
+    <p class="esc-title">沒有打開 App Store 嗎？</p>
+    <p class="esc-text">Instagram／Facebook 內建的瀏覽器有時會擋住 App Store。用 Safari 開啟就能下載：</p>
+    <a class="esc-btn" id="safari" href="#" hidden>用 Safari 開啟</a>
+    <p class="esc-text" id="steps">點右上或右下角的 <b>⋯</b>，選「<b>在外部瀏覽器開啟</b>」</p>
+    <button class="esc-copy" id="copy" type="button">複製下載連結</button>
+  </div>
+
+  <div class="shots">
+    <img src="../assets/android/zh-4.png" alt="核對藥物畫面" width="1080" height="2400">
+    <img src="../assets/android/zh-1.png" alt="今天的用藥進度" width="1080" height="2400">
+    <img src="../assets/android/zh-5.png" alt="依時間整理的藥物清單" width="1080" height="2400">
+  </div>
+
+  <h2>幫自己或爸媽按時吃藥</h2>
+  <ul class="feat">
+    <li>拍下藥袋或藥品標籤，AI 讀出藥名、劑量和時間，你逐項核對後再儲存</li>
+    <li>依餐前、餐後、睡前或固定間隔提醒，錯過的會標示出來</li>
+    <li>每種藥可以放一張照片，字體大，長輩看得清楚</li>
+    <li>手動新增藥物免費、不限次數；維他命、保健品也能記</li>
+  </ul>
+
+  <div class="privacy"><b>紀錄在手機，掃描才連網。</b>藥物清單與服藥紀錄存在手機上。掃描時照片經加密傳送辨識，姓名、生日會先在手機上遮住。</div>
+
+  <p class="notes">Ontimo 是提醒與記錄工具，不能取代醫師或藥師的建議</p>
+</main>
+<script>
+(function () {
+  var ua = navigator.userAgent || '';
+  var isIOS = /iPhone|iPad|iPod/i.test(ua);
+  var isAndroid = /Android/i.test(ua);
+  var ios = document.getElementById('ios');
+  var android = document.getElementById('android');
+  var target = null, store = '';
+
+  if (isIOS) {
+    target = ios; store = 'App Store'; android.hidden = true;
+    document.getElementById('sub').textContent = '掃一下，建立吃藥和保健品提醒';
+  } else if (isAndroid) {
+    target = android; store = 'Google Play'; ios.hidden = true;
+    android.style.background = ''; android.style.color = '';
+    android.className = 'get'; android.style.cssText = 'background:#5B18E8;color:#fff';
+  }
+  if (!target) return;                                   // computers: show both buttons, no forwarding
+
+  // Add ?stay=1 to the address to look at the page without being forwarded.
+  if (/[?&]stay=1/.test(location.search)) return;
+
+  // Instagram, Facebook, Messenger and Threads on iPhone sometimes leave a blank page
+  // when sent to apps.apple.com, so there we open the App Store app directly and
+  // show a way out to Safari if nothing happens.
+  var inMetaIOS = isIOS && /Instagram|FBAN|FBAV|FBIOS|Barcelona/i.test(ua);
+  if (inMetaIOS) {
+    ios.href = 'itms-apps://apps.apple.com/tw/app/id6808908688';
+    var here = location.origin + location.pathname;     // clean link, opened again in Safari
+    if (/Instagram/i.test(ua)) {
+      var safari = document.getElementById('safari');
+      safari.href = 'instagram://extbrowser/?url=' + encodeURIComponent(here);
+      safari.hidden = false;
+    }
+    document.getElementById('copy').addEventListener('click', function () {
+      var btn = this, done = function () { btn.textContent = '已複製，請貼到 Safari'; };
+      if (navigator.clipboard) { navigator.clipboard.writeText(here).then(done, fallback); } else { fallback(); }
+      function fallback() {
+        var t = document.createElement('textarea'); t.value = here; document.body.appendChild(t);
+        t.select(); try { document.execCommand('copy'); done(); } catch (e) {} t.remove();
+      }
+    });
+    // If the page is still showing 1.5 s after trying the App Store, offer the way out.
+    setTimeout(function () {
+      if (!document.hidden) {
+        document.getElementById('auto').hidden = true;
+        document.getElementById('escape').hidden = false;
+      }
+    }, 1500);
+  }
+
+  document.getElementById('status').textContent = '正在為你打開 ' + store + '…';
+  document.getElementById('auto').hidden = false;
+  document.getElementById('bar').className = 'bar run';
+  // Forward straight away; the page behind is only seen if forwarding fails.
+  setTimeout(function () { location.href = target.href; }, 50);
+})();
+</script>
+</body>
+</html>
