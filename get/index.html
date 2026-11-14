@@ -115,6 +115,33 @@ h2{font-size:18px;margin:26px 0 10px}
   var android = document.getElementById('android');
   var target = null, store = '';
 
+  // ---- Source tag -------------------------------------------------------
+  // 1) utm_source from the ad link (Meta fills {{site_source_name}} with fb, ig, msg, an)
+  // 2) otherwise the in-app browser's user agent
+  // 3) otherwise "web"
+  function param(name) {
+    var m = new RegExp('[?&]' + name + '=([^&#]*)').exec(location.search);
+    return m ? decodeURIComponent(m[1].replace(/\+/g, ' ')) : '';
+  }
+  function clean(s) { return (s || '').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 20); }
+  var src = clean(param('utm_source'));
+  if (!src) {
+    if (/Instagram/i.test(ua)) src = 'ig';
+    else if (/Barcelona/i.test(ua)) src = 'th';            // Threads
+    else if (/FBAN|FBAV|FBIOS|FB_IAB/i.test(ua)) src = 'fb';
+    else src = 'web';
+  }
+  var campaign = clean(param('utm_campaign')) || 'get';
+
+  // App Store campaign link: pt = provider token from App Store Connect, ct = campaign name (max 30 chars)
+  var IOS_TAG = '?pt=129149081&ct=' + src + '&mt=8';
+  // Google Play install referrer, shown under UTM source / campaign in Play Console
+  var PLAY_TAG = '&referrer=' + encodeURIComponent('utm_source=' + src + '&utm_medium=paid&utm_campaign=' + campaign);
+
+  ios.href = ios.href.split('?')[0] + IOS_TAG;
+  android.href = android.href.split('&referrer=')[0] + PLAY_TAG;
+  // -----------------------------------------------------------------------
+
   if (isIOS) {
     target = ios; store = 'App Store'; android.hidden = true;
     document.getElementById('sub').textContent = '掃一下，建立吃藥和保健品提醒';
@@ -133,8 +160,9 @@ h2{font-size:18px;margin:26px 0 10px}
   // show a way out to Safari if nothing happens.
   var inMetaIOS = isIOS && /Instagram|FBAN|FBAV|FBIOS|Barcelona/i.test(ua);
   if (inMetaIOS) {
-    ios.href = 'itms-apps://apps.apple.com/tw/app/id6808908688';
-    var here = location.origin + location.pathname;     // clean link, opened again in Safari
+    ios.href = 'itms-apps://apps.apple.com/tw/app/id6808908688' + IOS_TAG;
+    // Link opened again in Safari: keep the source, since Safari's user agent no longer shows it.
+    var here = location.origin + location.pathname + '?utm_source=' + src + '&utm_campaign=' + campaign;
     if (/Instagram/i.test(ua)) {
       var safari = document.getElementById('safari');
       safari.href = 'instagram://extbrowser/?url=' + encodeURIComponent(here);
