@@ -2,3 +2,4 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}.taiwan{background:#fff8f1;c
 
 .hero-mascot,.closing img{border-radius:50%}
 .hero h1 .eyebrow{display:block;line-height:1.8}
+.taiwan .pain{padding-top:10px;padding-bottom:90px}.pain .workflow article>p{min-height:0}.pain-close{font-weight:700;margin:40px 0 0}.taiwan .feat{padding-top:90px}.taiwan #who{padding-top:70px}.taiwan .features h3{font-size:20px}@media(max-width:600px){.taiwan .pain{padding-bottom:60px}.taiwan .feat{padding-top:60px}.pain .workflow{gap:30px}}
