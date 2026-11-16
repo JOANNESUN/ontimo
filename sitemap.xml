@@ -25,4 +25,12 @@
     <xhtml:link rel="alternate" hreflang="id" href="https://ontimoapp.com/id/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ontimoapp.com/"/>
   </url>
+  <url>
+    <loc>https://ontimoapp.com/tw/%E8%97%A5%E8%A2%8B%E6%8E%83%E6%8F%8F/</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://ontimoapp.com/tw/%E5%B9%AB%E7%88%B8%E5%AA%BD%E5%90%83%E8%97%A5%E6%8F%90%E9%86%92/</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
 </urlset>
