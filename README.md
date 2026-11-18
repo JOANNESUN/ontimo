@@ -2,9 +2,12 @@
 
 One-page public site for Ontimo at **https://ontimoapp.com**, used for Google Play Console website verification.
 
-- `index.html`: the landing page (English)
+- `index.html`: the landing page (Traditional Chinese, main audience is Taiwan)
+- `藥袋掃描/`, `幫爸媽吃藥提醒/`: Chinese feature pages
+- `文章/`: 用藥知識 articles
 - `assets/`: mascot, icons, shared stylesheet, app screenshots (cropped from the App Store set)
-- `tw/`, `id/`: Traditional Chinese and Indonesian versions
+- `en/`, `id/`: English and Indonesian versions
+- `tw/`, `zh/`: redirects from the old Chinese URLs to the root pages
 - `CNAME`: the custom domain, read by GitHub Pages
 - `.nojekyll`: serves files as they are, no Jekyll processing
 
