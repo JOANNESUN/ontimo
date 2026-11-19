@@ -72,7 +72,7 @@ h2{font-size:18px;margin:26px 0 10px}
   </div>
 
   <a class="get" id="ios" href="https://apps.apple.com/tw/app/ontimo-%E6%8C%89%E6%99%82%E5%90%83%E8%97%A5/id6808908688">App Store 免費下載</a>
-  <a class="get" id="android" href="https://play.google.com/store/apps/details?id=com.joannesun.ontimo&amp;hl=zh_TW&amp;gl=TW">Google Play 免費下載</a>
+  <a class="get" id="android" href="https://play.google.com/store/apps/details?id=com.joannesun.ontimo&amp;hl=zh_TW">Google Play 免費下載</a>
 
   <div id="auto" hidden>
     <p class="status" id="status" aria-live="polite"></p>
@@ -135,11 +135,9 @@ h2{font-size:18px;margin:26px 0 10px}
 
   // App Store campaign link: pt = provider token from App Store Connect, ct = campaign name (max 30 chars)
   var IOS_TAG = '?pt=129149081&ct=' + src + '&mt=8';
-  // Google Play install referrer, shown under UTM source / campaign in Play Console
-  var PLAY_TAG = '&referrer=' + encodeURIComponent('utm_source=' + src + '&utm_medium=paid&utm_campaign=' + campaign);
 
   ios.href = ios.href.split('?')[0] + IOS_TAG;
-  android.href = android.href.split('&referrer=')[0] + PLAY_TAG;
+  // Keep the Android destination as the simple Traditional Chinese store URL.
   // -----------------------------------------------------------------------
 
   if (isIOS) {
